@@ -1,0 +1,414 @@
+/* <!-- Swiper CSS --> */
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: oklch(100% 0.00011 271.152 / 0.228);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.25s ease,
+    transform 0.15s ease;
+}
+
+.swiper-pagination {
+  color: lab(100% 0.01 -0.01);
+}
+
+.swiper {
+  inset: 0;
+  width: 100%;
+  height: 550px;
+  z-index: 1;
+}
+
+.swiper-slide {
+  position: relative;
+  font-size: 18px;
+  height: 550px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-pagination-bullet {
+  background: #ffffff;
+}
+
+.swiper-pagination-bullet-active {
+  background: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 512px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}
+
+/* Swiper slide elements – initial hidden state */
+.slide-tag,
+.slide-title,
+.slide-desc,
+.slide-btn {
+  opacity: 0;
+  /* visibility: hidden; */
+}
+
+/* LOKER */
+
+/* Feature icon */
+.locker-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f3f4f6;
+  color: #1b3c53;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CTA button */
+.locker-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #1b3c53;
+  color: #ffffff;
+  padding: 14px 26px;
+}
+
+.locker-btn:hover {
+  background: #1b3c53;
+}
+
+/* SERVICES */
+
+.service-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.service-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #0f3d3e;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.service-link:hover {
+  color: #0f766e;
+}
+
+.services-btn {
+  padding: 10px 22px;
+  border: 1px solid #0f3d3e;
+  border-radius: 9999px;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.services-btn:hover {
+  background: #0f3d3e;
+  color: #ffffff;
+}
+
+/* GRID */
+
+.trust-card {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+}
+
+.trust-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #0f3d3e24;
+  color: #0f3d3e;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.trust-btn {
+  margin-top: 10px;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  background: #0f3d3e;
+  color: white;
+  display: inline-block;
+}
+
+/* ABOUT SECTION */
+
+.payments-bg {
+  position: absolute;
+
+  height: 420px;
+  background: #1b3c53;
+  border-radius: 32px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.payments-card {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.payments-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #e9f8fe;
+  color: #1b3c53;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+/* ABOUT SECTION */
+
+.benefit-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f3f4f6;
+  color: #1b3c53;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Download card */
+.fd-download-card {
+  background: #ffffff;
+  padding: 28px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.fd-download-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+}
+
+.fd-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #1b3c53;
+  color: #ffffff;
+  padding: 12px 18px;
+  margin-top: 16px;
+}
+
+/* FAQ */
+/* RIGHT FAQ LIST SPACING */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* FAQ ITEM CARD */
+.faq-item {
+  background: #f5f5f5;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* QUESTION ROW */
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 20px;
+  background: transparent;
+  text-align: left;
+}
+
+/* NUMBER CIRCLE */
+.faq-number {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+/* ACTIVE FAQ HEADER */
+.faq-item.active .faq-question {
+  background: #1b3c53; /* dark maroon like image */
+  color: #ffffff;
+}
+
+/* ACTIVE NUMBER */
+.faq-item.active .faq-number {
+  background: #ffffff;
+  color: #1b3c53;
+}
+
+/* ANSWER AREA */
+.faq-answer {
+  background: #ffffff;
+  padding: 16px 20px;
+}
+
+/* ICON ALIGNMENT */
+.faq-icon {
+  margin-left: auto;
+  color: #9ca3af;
+}
+
+/* ACTIVE ICON */
+.faq-item.active .faq-icon {
+  color: #ffffff;
+}
+
+.faq-tag {
+  padding: 8px 14px;
+  background: #ffffff;
+}
+
+.faq-tag:hover {
+  background: #e2f1fe17;
+  color: #1b3c53;
+}
+
+.faq-question:hover {
+  background: #1b3c53;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.faq-question:hover .faq-number {
+  background: #ffffff;
+  color: #1b3c53;
+}
+
+/* BLOGS */
+.blog-card {
+  background: #ffffff;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.blog-nav-btn {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #e5e7eb;
+}
+
+.blog-nav-btn:hover {
+  background: #e2eefe;
+  color: #1b3c53;
+}
+
+/* FOOTER */
+
+.footer-links li {
+  cursor: pointer;
+}
+
+.footer-links li:hover {
+  color: #1b3c53;
+}
+
+.footer-mail:hover {
+  color: #1b3c53;
+}
+
+.footer-mail-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* FOOTER MAIN */
+.footer-util-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-util-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #1b3c53;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-util-item:hover {
+  color: #1b3c53;
+}
+
+.footer-social a {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social span:hover {
+  background: #1b3c533c;
+  color: #1b3c53;
+}
+
+.footer-links p:hover {
+  color: #1b3c53;
+}

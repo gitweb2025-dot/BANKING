@@ -1,0 +1,1325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StackBank | Secure Digital Banking & FinTech Infrastructure</title>
+
+    <meta
+      name="description"
+      content="StackBank provides secure, scalable digital banking solutions for banks and fintechs. Core banking, payments, APIs, and compliance-ready financial infrastructure."
+    />
+
+    <meta
+      name="keywords"
+      content="StackBank, banking solutions, digital banking platform, core banking software, fintech infrastructure, payment systems, banking APIs, financial technology"
+    />
+
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="StackBank – Digital Banking & FinTech Infrastructure"
+    />
+    <meta
+      property="og:description"
+      content="Enterprise-grade banking infrastructure for payments, core banking, and compliant financial products. Built for banks and fintechs."
+    />
+    <meta property="og:site_name" content="StackBank" />
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <!-- ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <!-- ScrollTo -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollToPlugin.min.js"></script>
+    <!-- ScrollSmoother  -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
+    <!-- SplitText -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+    <!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/EasePack.min.js"></script>
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- GOOGLE FONT CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&family=Della+Respira&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Julius+Sans+One&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- J-QUERY CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- LENIS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.3.17/dist/lenis.css"
+    />
+    <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
+
+    <!-- Swiper JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="font-primary">
+    <div>
+      <!-- NAVBAR -->
+      <header
+        id="navbar"
+        class="nav-root fixed top-0 left-0 right-0 w-full z-50 bg-white text-primary max-w-7xl mx-auto"
+      >
+        <nav class="px-6">
+          <div class="h-20.5 flex items-center justify-between">
+            <!-- LOGO -->
+            <div class="nav-logo flex items-center gap-3">
+              <span class="text-2xl font-semibold text-primary">StackBank</span>
+            </div>
+
+            <!-- DESKTOP NAV -->
+            <nav
+              class="nav-desktop hidden lg:flex items-center gap-12 relative"
+            >
+              <!-- HOME -->
+              <div class="nav-item has-sub relative flex items-center gap-2">
+                <a href="./index.html" class="nav-link">Home</a>
+                <button class="submenu-toggle" type="button">
+                  <i class="fa-solid fa-angle-down"></i>
+                </button>
+
+                <div
+                  class="submenu w-32 absolute top-13 left-0 bg-secondary text-white z-40 rounded-xl p-6 space-y-3"
+                >
+                  <a href="./404.html" class="block">Home 1</a>
+                  <a href="./404.html" class="block">Home 2</a>
+                  <a href="./404.html" class="block">Home 3</a>
+                </div>
+              </div>
+
+              <a href="./404.html" class="nav-link">About</a>
+
+              <!-- SERVICES -->
+              <div class="nav-item has-sub relative flex items-center gap-2">
+                <a href="./404.html" class="nav-link">Services</a>
+                <button class="submenu-toggle" type="button">
+                  <i class="fa-solid fa-angle-down"></i>
+                </button>
+
+                <div
+                  class="submenu w-56 absolute top-13 left-0 bg-secondary text-white z-40 rounded-xl p-6 space-y-3 flex flex-col justify-center"
+                >
+                  <a href="./404.html">Cloud Services</a>
+                  <a href="./404.html">Cyber Security</a>
+                  <a href="./404.html">IT Consulting</a>
+                </div>
+              </div>
+
+              <a href="./404.html" class="nav-link">Blog</a>
+              <a href="./404.html" class="nav-link">Contact</a>
+
+              <!-- CTA -->
+              <a
+                href="./404.html"
+                class="nav-cta hidden lg:inline-block px-4 py-2 rounded-lg bg-primary text-white"
+              >
+                <button
+                  class="cta-btn flex text-sm items-center gap-3 font-semibold cursor-pointer"
+                >
+                  CREATE ACCOUNT
+                  <span
+                    class="w-8 h-8 rounded-full bg-white text-primary flex items-center justify-center"
+                  >
+                    <i class="fa-regular fa-circle-user"></i>
+                  </span>
+                </button>
+              </a>
+            </nav>
+
+            <!-- MOBILE ICON -->
+            <button class="hamburger lg:hidden">
+              <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+          </div>
+        </nav>
+
+        <!-- MOBILE MENU -->
+        <div
+          class="mobile-menu fixed hidden inset-0 bg-primary text-white z-50 p-8"
+        >
+          <button class="mobile-close mb-10">
+            <i class="fa-solid fa-xmark text-2xl"></i>
+          </button>
+
+          <nav class="mobile-links flex flex-col gap-6 text-xl">
+            <div
+              class="nav-item has-sub relative flex items-center justify-between"
+            >
+              <a href="./index.html" class="nav-link">Home</a>
+              <button class="submenu-toggle" type="button">
+                <i class="fa-solid fa-angle-down"></i>
+              </button>
+
+              <div
+                class="submenu absolute left-0 top-full mt-3 bg-secondary text-white rounded-xl p-6 space-y-3 flex flex-col justify-center w-full z-50"
+              >
+                <a href="./404.html">Home 1</a>
+                <a href="./404.html">Home 2</a>
+                <a href="./404.html">Home 3</a>
+              </div>
+            </div>
+
+            <a href="./404.html" class="nav-link">About</a>
+
+            <div
+              class="nav-item has-sub relative flex items-center justify-between"
+            >
+              <a href="./404.html" class="nav-link">Services</a>
+              <button class="submenu-toggle" type="button">
+                <i class="fa-solid fa-angle-down"></i>
+              </button>
+
+              <div
+                class="submenu absolute left-0 top-full mt-3 bg-secondary text-white rounded-xl p-6 space-y-3 flex flex-col justify-center w-full z-50"
+              >
+                <a href="./404.html">Cloud Services</a>
+                <a href="./404.html">Cyber Security</a>
+                <a href="./404.html">IT Consulting</a>
+              </div>
+            </div>
+
+            <a href="./404.html" class="nav-link">Blog</a>
+            <a href="./404.html" class="nav-link">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- HOME -->
+      <main
+        id="home"
+        class="mx-auto max-w-7xl mt-16 text-white overflow-hidden"
+      >
+        <div class="relative">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <!-- img1 -->
+              <div class="swiper-slide">
+                <img
+                  class="slide-image h-full w-full object-cover object-center md:object-[20%_20%] brightness-75"
+                  src="./src/assets/home1.webp"
+                  alt="home1"
+                />
+
+                <!-- contents -->
+                <div
+                  class="absolute inset-0 z-10 p-3 mdx:pl-16 h-137.5 w-full flex flex-col items-start justify-center gap-6 bg-linear-to-b from-transparent to-primary/60 py-40"
+                >
+                  <p class="z-30 slide-tag">Smart Savings</p>
+
+                  <h1
+                    class="slide-title text-2xl md:text-5xl font-primary font-bold z-30 md:max-w-2xl"
+                  >
+                    Secure Your Future with High-Interest Savings & Fixed
+                    Deposits
+                  </h1>
+
+                  <p class="slide-desc text-sm md:text-lg z-30 md:max-w-5xl">
+                    Grow your money safely with flexible savings accounts and
+                    high-return fixed deposits designed for stability,
+                    liquidity, and long-term goals.
+                  </p>
+
+                  <a
+                    class="slide-btn px-6 py-3 border border-white/50 z-30"
+                    href="./404.html"
+                  >
+                    Explore Savings
+                  </a>
+                </div>
+              </div>
+              <!-- img2 -->
+              <div class="swiper-slide">
+                <img
+                  class="slide-image h-full w-full object-cover object-center md:object-[20%_20%] brightness-75"
+                  src="./src/assets/home2.webp"
+                  alt="home2"
+                />
+                <!-- contents -->
+                <div
+                  class="absolute inset-0 z-10 p-3 mdx:pl-16 h-137.5 w-full flex flex-col items-start justify-center gap-6 bg-linear-to-b from-transparent to-primary/60 py-40"
+                >
+                  <p class="z-30 slide-tag">Everyday Banking</p>
+
+                  <h1
+                    class="slide-title text-2xl md:text-5xl font-primary font-bold z-30 md:max-w-2xl"
+                  >
+                    Simple, Secure & Digital Banking for Everyday Needs
+                  </h1>
+
+                  <p class="slide-desc text-sm md:text-lg z-30 md:max-w-5xl">
+                    Enjoy seamless account management, instant transfers, and
+                    secure digital banking services designed to make everyday
+                    transactions effortless.
+                  </p>
+
+                  <a
+                    class="slide-btn px-6 py-3 border border-white/50 z-30"
+                    href="./404.html"
+                  >
+                    Open an Account
+                  </a>
+                </div>
+              </div>
+              <!-- img3 -->
+              <div class="swiper-slide">
+                <img
+                  class="slide-image h-full w-full object-cover object-center md:object-[20%_20%] brightness-75"
+                  src="./src/assets/home3.webp"
+                  alt="home3"
+                />
+                <!-- contents -->
+                <div
+                  class="absolute inset-0 z-10 p-3 mdx:pl-16 h-137.5 w-full flex flex-col items-start justify-center gap-6 bg-linear-to-b from-transparent to-primary/60 py-40"
+                >
+                  <p class="z-30 slide-tag">Easy Credit</p>
+
+                  <h1
+                    class="slide-title text-2xl md:text-5xl font-primary font-bold z-30 md:max-w-2xl"
+                  >
+                    Flexible Loan & Credit Solutions to Power Your Goals
+                  </h1>
+
+                  <p class="slide-desc text-sm md:text-lg z-30 md:max-w-5xl">
+                    From personal loans to business financing, access fast
+                    approvals, transparent terms, and credit solutions tailored
+                    to your needs.
+                  </p>
+
+                  <a
+                    class="slide-btn px-6 py-3 border border-white/50 z-30"
+                    href="./404.html"
+                  >
+                    View Loan Options
+                  </a>
+                </div>
+              </div>
+              <!-- img4 -->
+              <div class="swiper-slide">
+                <img
+                  class="slide-image h-full w-full object-cover object-center md:object-[20%_20%] brightness-75"
+                  src="./src/assets/home4.webp"
+                  alt="home4"
+                />
+                <!-- contents -->
+                <div
+                  class="absolute inset-0 z-10 p-3 mdx:pl-16 h-137.5 w-full flex flex-col items-start justify-center gap-6 bg-linear-to-b from-transparent to-primary/60 py-40"
+                >
+                  <p class="z-30 slide-tag">Wealth Management</p>
+
+                  <h1
+                    class="slide-title text-2xl md:text-5xl font-primary font-bold z-30 md:max-w-2xl"
+                  >
+                    Invest Smarter with Expert-Driven Wealth Solutions
+                  </h1>
+
+                  <p class="slide-desc text-sm md:text-lg z-30 md:max-w-5xl">
+                    Build and manage your wealth with curated investment
+                    options, expert insights, and long-term strategies designed
+                    for consistent growth.
+                  </p>
+
+                  <a
+                    class="slide-btn px-6 py-3 border border-white/50 z-30"
+                    href="./404.html"
+                  >
+                    Start Investing
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev">
+              <svg width="16" height="16" viewBox="0 0 24 24">
+                <path
+                  d="M15 18l-6-6 6-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+
+            <div class="swiper-button-next">
+              <svg width="16" height="16" viewBox="0 0 24 24">
+                <path
+                  d="M9 6l6 6-6 6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </main>
+
+      <!-- ABOUT SECTION -->
+      <section class="py-24 bg-white payments-section overflow-hidden">
+        <div
+          class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center"
+        >
+          <!-- LEFT CONTENT -->
+          <div class="payments-content">
+            <p class="text-primary font-semibold mb-4 payments-tag">ABOUT US</p>
+
+            <h2
+              class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 payments-title"
+            >
+              Building the Future of Digital Payments
+            </h2>
+
+            <p class="text-slate-600 max-w-xl mb-12 payments-desc">
+              We build secure, scalable digital payment solutions that empower
+              businesses and customers to transact with confidence worldwide.
+            </p>
+
+            <!-- FEATURES -->
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 gap-6 payments-features"
+            >
+              <div class="payments-card">
+                <div class="payments-icon">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h4 class="font-semibold mb-2">Secure & Reliable</h4>
+                <p class="text-slate-600">
+                  Enterprise-grade security with continuous monitoring and
+                  encryption.
+                </p>
+              </div>
+
+              <div class="payments-card">
+                <div class="payments-icon">
+                  <i class="fa-solid fa-globe"></i>
+                </div>
+                <h4 class="font-semibold mb-2">Global Support</h4>
+                <p class="text-slate-600">
+                  Always-on support across regions to keep payments moving
+                  smoothly.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT IMAGE -->
+          <div class="payments-visual relative flex justify-center">
+            <!-- PURPLE SHAPE -->
+            <div class="payments-bg"></div>
+
+            <!-- PHONE -->
+            <img
+              src="./src/assets/about1.webp"
+              alt="Smart Banking App"
+              class="relative z-10 payments-phone"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- LOCKER -->
+      <section class="py-24 bg-white locker-section overflow-hidden">
+        <div
+          class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center"
+        >
+          <!-- LEFT CONTENT -->
+          <div class="locker-content">
+            <div
+              class="flex items-center gap-2 text-primary font-semibold text-sm mb-6 locker-tag"
+            >
+              <span class="w-6 h-0.5 bg-primary"></span>
+              LOCKER FACILITY
+            </div>
+
+            <h2
+              class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 locker-title"
+            >
+              Ultimate Locker Solution<br />for Valuables
+            </h2>
+
+            <p class="text-slate-600 max-w-xl mb-6 locker-desc">
+              Frequently occur that pleasures have to repudiated and annoyances
+              accepted the wise man always holds.
+            </p>
+
+            <p class="flex items-center gap-2 text-slate-800 mb-10 locker-note">
+              <span class="text-primary">✦</span>
+              Affordable Security, Check our Locker
+              <a href="#" class="text-primary font-semibold">Pricing.</a>
+            </p>
+
+            <!-- FEATURES -->
+            <div class="mb-10 locker-features">
+              <p class="text-primary font-semibold mb-6">KEY FEATURES</p>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="flex items-start gap-4">
+                  <span class="locker-icon">
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                  <span class="text-slate-800"
+                    >Available in<br />Different Sizes.</span
+                  >
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <span class="locker-icon">
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                  <span class="text-slate-800"
+                    >Affordable Rental<br />Plans.</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <a href="./404.html" class="locker-btn">
+              <i class="fa-solid fa-arrow-right"></i>
+              Locker Request
+            </a>
+          </div>
+
+          <!-- RiGHT IMAGE -->
+          <div class="locker-image-wrapper">
+            <img
+              src="./src/assets/locker.webp"
+              alt="Locker Facility"
+              class="w-full h-full object-cover rounded-md locker-image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section
+        class="py-24 max-w-7xl mx-auto w-full bg-slate-50 services-section overflow-hidden"
+      >
+        <div class="px-6">
+          <!-- Header -->
+          <div
+            class="flex flex-wrap gap-8 justify-between items-center mb-16 services-header"
+          >
+            <h2
+              class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900"
+            >
+              Our Services
+            </h2>
+
+            <a href="./404.html" class="services-btn">ALL SERVICES</a>
+          </div>
+
+          <!-- Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 services-grid">
+            <!-- Card -->
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <h3 class="font-semibold text-slate-900 mb-2">
+                Financial Consulting
+              </h3>
+              <p class="text-slate-600 mb-6 max-w-sm">
+                Life insurance offers lump sums or payments to help
+                beneficiaries cover debts and expenses.
+              </p>
+              <a href="./404.html" class="service-link">
+                View More Details <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+              <h3 class="font-semibold text-slate-900 mb-2">
+                Business Advisory
+              </h3>
+              <p class="text-slate-600 mb-6 max-w-sm">
+                Life insurance offers lump sums or payments to help
+                beneficiaries cover debts and expenses.
+              </p>
+              <a href="./404.html" class="service-link">
+                View More Details <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fa-solid fa-chart-pie"></i>
+              </div>
+              <h3 class="font-semibold text-slate-900 mb-2">Market Analysis</h3>
+              <p class="text-slate-600 mb-6 max-w-sm">
+                Life insurance offers lump sums or payments to help
+                beneficiaries cover debts and expenses.
+              </p>
+              <a href="./404.html" class="service-link">
+                View More Details <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fa-solid fa-shield-heart"></i>
+              </div>
+              <h3 class="font-semibold text-slate-900 mb-2">
+                Financial Shield
+              </h3>
+              <p class="text-slate-600 mb-6 max-w-sm">
+                Life insurance offers lump sums or payments to help
+                beneficiaries cover debts and expenses.
+              </p>
+              <a href="./404.html" class="service-link">
+                View More Details <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GRID -->
+      <section
+        class="py-28 bg-linear-to-b from-white to-primary/5 trust-sectionv overflow-hidden"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <!-- Header -->
+          <div class="text-center mb-20 trust-header">
+            <p class="text-primary font-semibold mb-4 trust-tag">PRODUCT</p>
+            <h2
+              class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 max-w-3xl mx-auto"
+            >
+              Why Millions Trust Us for<br />Their Payments
+            </h2>
+          </div>
+
+          <!-- Main Content -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center trust-main"
+          >
+            <!-- LEFT -->
+            <div class="space-y-10 trust-left">
+              <div class="trust-card">
+                <span class="trust-icon"
+                  ><i class="fa-solid fa-wallet"></i
+                ></span>
+                <h4 class="font-semibold">Digital Wallet</h4>
+                <p class="text-slate-600">
+                  Fast, secure wallets for everyday digital payments.
+                </p>
+                <a
+                  href="./404.html"
+                  class="bg-primary px-6 py-3 w-fit rounded-lg text-white block mt-8"
+                >
+                  <i class="fa-solid fa-arrow-right"></i>
+                  Read More
+                </a>
+              </div>
+
+              <div class="trust-card">
+                <span class="trust-icon"
+                  ><i class="fa-solid fa-shield"></i
+                ></span>
+                <h4 class="font-semibold">Data Protection</h4>
+                <p class="text-slate-600">
+                  Advanced encryption and real-time threat monitoring.
+                </p>
+                <a
+                  href="./404.html"
+                  class="bg-primary px-6 py-3 w-fit rounded-lg text-white block mt-8"
+                >
+                  <i class="fa-solid fa-arrow-right"></i>
+                  Read More
+                </a>
+              </div>
+            </div>
+
+            <!-- CENTER (PLACEHOLDER IMAGE) -->
+            <div class="flex justify-center trust-center h-125 overflow-hidden">
+              <img
+                src="./src/assets/grid.webp"
+                alt="App Preview"
+                class="trust-phone object-cover h-full w-full object-top"
+              />
+            </div>
+
+            <!-- RIGHT -->
+            <div class="space-y-10 trust-right">
+              <div class="trust-card">
+                <span class="trust-icon"
+                  ><i class="fa-solid fa-headset"></i
+                ></span>
+                <h4 class="font-semibold">Global Support</h4>
+                <p class="text-slate-600">
+                  24/7 multilingual assistance worldwide.
+                </p>
+                <a
+                  href="./404.html"
+                  class="bg-primary px-6 py-3 w-fit rounded-lg text-white block mt-8"
+                >
+                  <i class="fa-solid fa-arrow-right"></i>
+                  Read More
+                </a>
+              </div>
+
+              <div class="trust-card">
+                <span class="trust-icon"><i class="fa-solid fa-lock"></i></span>
+                <h4 class="font-semibold">Secure & Reliable</h4>
+                <p class="text-slate-600">
+                  Bank-grade infrastructure with zero downtime.
+                </p>
+                <a
+                  href="./404.html"
+                  class="bg-primary px-6 py-3 w-fit rounded-lg text-white block mt-8"
+                >
+                  <i class="fa-solid fa-arrow-right"></i>
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- STATS -->
+          <div class="mt-24 bg-white rounded-2xl shadow-lg py-12 trust-stats">
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 md:gap-20 text-center"
+            >
+              <div class="trust-stat">
+                <h3 class="trust-count text-4xl font-bold" data-count="72000">
+                  0
+                </h3>
+                <p class="text-2xl">Active Users</p>
+              </div>
+
+              <div class="trust-stat">
+                <h3 class="trust-count text-4xl font-bold" data-count="45000">
+                  0
+                </h3>
+                <p class="text-2xl">Daily Transactions</p>
+              </div>
+
+              <div class="trust-stat">
+                <h3 class="trust-count text-4xl font-bold" data-count="99">
+                  0
+                </h3>
+                <p class="text-2xl">Security Guaranteed</p>
+              </div>
+
+              <div class="trust-stat">
+                <h3 class="trust-count text-4xl font-bold" data-count="500">
+                  0
+                </h3>
+                <p class="text-2xl">Integrated Merchants</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="py-24 bg-white fd-section overflow-hidden">
+        <div
+          class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center"
+        >
+          <!-- LEFT IMAGE -->
+          <div class="fd-image-wrapper h-full w-full">
+            <div class="relative overflow-hidden rounded-md h-full w-full">
+              <img
+                src="./src/assets/about.webp"
+                alt="Fixed Deposit"
+                class="w-full h-full object-cover fd-image"
+              />
+            </div>
+          </div>
+
+          <!-- RIGHT CONTENT -->
+          <div class="fd-content">
+            <h2 class="text-4xl font-bold text-slate-900 mb-6 fd-title">
+              Fixed Deposit
+            </h2>
+
+            <p class="text-slate-600 max-w-xl mb-8 fd-desc">
+              Beguiled and demoralized by the charms of pleasure of the so
+              blinded by desire that they cannot foresee.
+            </p>
+
+            <div class="mb-10">
+              <p class="text-primary font-semibold mb-6 fd-subtitle">
+                KEY BENEFITS:
+              </p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                <ul class="space-y-6 fd-benefits">
+                  <li class="flex items-start gap-4">
+                    <span class="benefit-icon">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <span class="text-slate-800">100% Guaranteed returns</span>
+                  </li>
+
+                  <li class="flex items-start gap-4">
+                    <span class="benefit-icon">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <span class="text-slate-800"
+                      >Loan against FD available</span
+                    >
+                  </li>
+
+                  <li class="flex items-start gap-4">
+                    <span class="benefit-icon">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <span class="text-slate-800">Flexible tenure options</span>
+                  </li>
+                </ul>
+
+                <!-- DOWNLOAD CARD -->
+                <div class="fd-download-card">
+                  <div class="fd-download-icon">
+                    <i class="fa-solid fa-file-pdf"></i>
+                  </div>
+
+                  <h4>Guide to get better<br />Fixed Deposits</h4>
+                  <p class="text-sm text-black/50">PDF 6.8MB</p>
+
+                  <a href="./404.html" class="fd-download-btn">
+                    <i class="fa-solid fa-arrow-right"></i> Download
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-8 fd-bottom">
+              <!-- CTA TEXT -->
+              <p class="text-slate-900 font-semibold flex items-center gap-3">
+                <span class="text-primary text-xl">✦</span>
+                Find the Perfect FD Option for Your Needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="py-24 bg-white faq-section overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+          <!-- Header -->
+          <div class="text-center mb-16 faq-header">
+            <div
+              class="flex justify-center items-center gap-2 text-primary text-sm font-semibold mb-4"
+            >
+              <span class="w-6 h-0.5 bg-primary"></span>
+              FAQ'S
+            </div>
+            <h2 class="text-4xl font-bold text-slate-900">
+              Read Questions & Answers
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 xl:grid-cols-3 gap-16 items-start">
+            <!-- LEFT CATEGORIES -->
+            <div class="bg-slate-50 p-8 faq-categories h-full">
+              <h4 class="text-lg font-semibold mb-2">Categories</h4>
+              <p class="text-slate-600 mb-6">
+                Wide range of topics to address common queries.
+              </p>
+
+              <div class="flex flex-wrap gap-3 mb-10">
+                <a href="./404.html" class="faq-tag">Account</a>
+                <a href="./404.html" class="faq-tag">Online Banking</a>
+                <a href="./404.html" class="faq-tag">Mobile Banking</a>
+                <a href="./404.html" class="faq-tag">Deposits</a>
+                <a href="./404.html" class="faq-tag">Withdrawals</a>
+                <a href="./404.html" class="faq-tag">Loans</a>
+                <a href="./404.html" class="faq-tag">Business</a>
+                <a href="./404.html" class="faq-tag">Credit Card</a>
+                <a href="./404.html" class="faq-tag">Interests</a>
+                <a href="./404.html" class="faq-tag">SIP</a>
+                <a href="./404.html" class="faq-tag">Business</a>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="faq-help-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <p class="font-semibold">Can't Find What You Need?</p>
+                  <a
+                    href="#"
+                    class="text-primary font-semibold inline-flex items-center gap-2"
+                  >
+                    Submit Queries <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT FAQ -->
+            <div class="lg:col-span-2 faq-list">
+              <!-- ITEM -->
+              <div class="faq-item active">
+                <button class="faq-question">
+                  <span class="faq-number">01</span>
+                  <span class="faq-text">How do I open a new account?</span>
+                  <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    You can open a new bank account by visiting any branch with
+                    valid identification documents or by applying online through
+                    our secure digital banking platform.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  <span class="faq-number">02</span>
+                  <span class="faq-text"
+                    >How can I check my account balance?</span
+                  >
+                  <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Account balances can be checked via mobile banking, internet
+                    banking, ATMs, or by contacting customer support.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  <span class="faq-number">03</span>
+                  <span class="faq-text">Is online banking secure?</span>
+                  <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Yes. Our online banking uses multi-layer encryption,
+                    two-factor authentication, and continuous monitoring to
+                    protect your data.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  <span class="faq-number">04</span>
+                  <span class="faq-text"
+                    >What is the daily ATM withdrawal limit?</span
+                  >
+                  <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Daily withdrawal limits depend on your account type and can
+                    be viewed or modified through online banking or by visiting
+                    a branch.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  <span class="faq-number">05</span>
+                  <span class="faq-text">How do I apply for a loan?</span>
+                  <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Loan applications can be submitted online or at any branch
+                    with required financial documents for assessment.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOGS -->
+      <section class="py-24 bg-white blog-section overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+          <!-- Header -->
+          <div
+            class="flex flex-wrap justify-between gap-6 items-center mb-14 blog-header"
+          >
+            <div>
+              <div
+                class="flex items-center gap-2 text-primary text-sm font-semibold mb-3"
+              >
+                <span class="w-6 h-0.5 bg-primary"></span>
+                BLOG POST
+              </div>
+              <h2 class="text-4xl font-bold text-slate-900">
+                Latest from Blog Post
+              </h2>
+            </div>
+
+            <div class="flex gap-3">
+              <a
+                class="px-6 py-3 rounded-lg bg-primary text-white flex items-center gap-4"
+                href="./404.html"
+                >Read More
+
+                <span
+                  class="w-8 h-8 rounded-full bg-white text-primary flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 blog-grid">
+            <!-- FEATURED CARD -->
+            <div class="blog-card blog-featured">
+              <img
+                src="./src/assets/b3.webp"
+                alt="b3"
+                class="w-full h-56 object-cover"
+              />
+
+              <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                  <span class="text-primary font-semibold text-sm"
+                    >FINANCIAL PLANNING</span
+                  >
+                  <div class="text-right">
+                    <p class="text-xl font-bold">14</p>
+                    <p class="text-slate-500 text-sm">Sep, 2024</p>
+                  </div>
+                </div>
+
+                <p class="text-slate-500 text-sm mb-2">By Admin</p>
+
+                <h3 class="font-semibold text-slate-900 mb-4">
+                  How to Improve Your Credit Score Tips and Tricks.
+                </h3>
+
+                <div class="flex justify-between items-center">
+                  <span class="text-slate-500 text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-clock text-primary"></i> 1 year ago
+                  </span>
+                  <a href="./404.html"
+                    ><i class="fa-solid fa-arrow-right text-slate-400"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- NORMAL CARD -->
+            <div class="blog-card">
+              <img
+                src="./src/assets/b2.webp"
+                alt="b2"
+                class="w-full h-56 object-cover"
+              />
+              <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                  <span class="text-primary font-semibold text-sm"
+                    >CREDIT CARD</span
+                  >
+                  <div class="text-right">
+                    <p class="text-xl font-bold">16</p>
+                    <p class="text-slate-500 text-sm">Jan, 2024</p>
+                  </div>
+                </div>
+
+                <p class="text-slate-500 text-sm mb-2">By Admin</p>
+
+                <h3 class="font-semibold text-slate-900 mb-4">
+                  Your Credit card score to improve by paying due on date.
+                </h3>
+
+                <div class="flex justify-between items-center">
+                  <span class="text-slate-500 text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-clock text-primary"></i> 1 year ago
+                  </span>
+                  <a href="./404.html"
+                    ><i class="fa-solid fa-arrow-right text-slate-400"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- NORMAL CARD -->
+            <div class="blog-card">
+              <img
+                src="./src/assets/b1.webp"
+                alt="b1"
+                class="w-full h-56 object-cover"
+              />
+
+              <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                  <span class="text-primary font-semibold text-sm"
+                    >ACCOUNT</span
+                  >
+                  <div class="text-right">
+                    <p class="text-xl font-bold">14</p>
+                    <p class="text-slate-500 text-sm">Sep, 2024</p>
+                  </div>
+                </div>
+
+                <p class="text-slate-500 text-sm mb-2">By Admin</p>
+
+                <h3 class="font-semibold text-slate-900 mb-4">
+                  Growth Strategies for Your Small Business with better loan
+                  options.
+                </h3>
+
+                <div class="flex justify-between items-center">
+                  <span class="text-slate-500 text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-clock text-primary"></i> 1 year ago
+                  </span>
+                  <a href="./404.html"
+                    ><i class="fa-solid fa-arrow-right text-slate-400"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <section class="py-20 bg-white footer-section overflow-hidden">
+        <div
+          class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20"
+        >
+          <!-- LEFT SIDE -->
+          <div class="footer-left">
+            <!-- Certification -->
+            <div
+              class="bg-primary text-white p-6 flex items-center gap-4 mb-10 footer-cert"
+            >
+              <img class="w-16" src="./src/assets/certify.webp" alt="" />
+              <div>
+                <p class="font-semibold">
+                  Certified for Quality Management Excellence.
+                </p>
+                <p class="text-sm opacity-80">2000–2001</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
+              <!-- Enquiry -->
+              <div class="footer-enquiry">
+                <h4 class="font-semibold mb-4">Enquiry</h4>
+
+                <p class="mb-4">
+                  <strong>0800-896-1234</strong> (Toll Free)<br />
+                  <span class="text-slate-500">Personal</span>
+                </p>
+
+                <p class="mb-6">
+                  <strong>+49-69-1234-5678</strong><br />
+                  <span class="text-slate-500">Corporate</span>
+                </p>
+
+                <div class="flex items-center gap-4 footer-mail">
+                  <span class="footer-mail-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                  </span>
+                  <div>
+                    <p class="font-semibold">info@stackbank.com</p>
+                    <p class="text-slate-500 text-sm">Send your queries.</p>
+                  </div>
+                  <i class="fa-solid fa-arrow-right ml-auto"></i>
+                </div>
+              </div>
+
+              <!-- Banking Hours -->
+              <div class="footer-hours">
+                <h4 class="font-semibold mb-4">Banking Hours</h4>
+
+                <p class="mb-4">
+                  <strong>9.00am to 5.00pm</strong><br />
+                  <span class="text-slate-500">Mon – Friday</span>
+                </p>
+
+                <p>
+                  <strong>9.00am to 2.00pm</strong><br />
+                  <span class="text-slate-500">Saturday</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE -->
+          <div class="footer-right grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="w-full flex flex-col gap-4">
+              <div>
+                <h4 class="font-semibold mb-6">Our Bank</h4>
+                <ul class="space-y-3 footer-links">
+                  <a href="./404.html" class="block">Credit Card</a>
+                  <a href="./404.html" class="block">Easy EMI Card</a>
+                  <a href="./404.html" class="block">Platinum Card</a>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-semibold mb-6">Support</h4>
+                <ul class="space-y-3 footer-links">
+                  <a href="./404.html" class="block">Insurance</a>
+                  <a href="./404.html" class="block">Leadership</a>
+                  <a href="./404.html" class="block">Titanium Times</a>
+                  <a href="./404.html" class="block">Trade FX</a>
+                  <a href="./404.html" class="block">Vehicle Loan</a>
+                </ul>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 col-span-2">
+              <div class="w-full">
+                <h4 class="font-semibold mb-6">Products</h4>
+                <ul class="space-y-3 footer-links">
+                  <a href="./404.html" class="block">About Us</a>
+                  <a href="./404.html" class="block">All Cards</a>
+                  <a href="./404.html" class="block">Business</a>
+                  <a href="./404.html" class="block">Careers</a>
+                  <a href="./404.html" class="block">Debit Card</a>
+                  <a href="./404.html" class="block">Demat</a>
+                  <a href="./404.html" class="block">Get In Touch</a>
+                  <a href="./404.html" class="block">Openings</a>
+                  <!-- <a href="./404.html" class="block">Savings Account</a> -->
+                  <a href="./404.html" class="block">Senior Citizen</a>
+                  <a href="./404.html" class="block">Testimonials</a>
+                </ul>
+              </div>
+
+              <div class="w-full">
+                <h4 class="font-semibold mb-6">Banking</h4>
+                <ul class="space-y-3 footer-links">
+                  <a href="./404.html" class="block">About Us</a>
+                  <a href="./404.html" class="block">Internet Banking</a>
+                  <a href="./404.html" class="block">Mobile Banking</a>
+                  <a href="./404.html" class="block">Whatsapp Banking</a>
+                  <a href="./404.html" class="block">Charges</a>
+                  <a href="./404.html" class="block">Disclaimer</a>
+                  <a href="./404.html" class="block">Legal</a>
+                  <a href="./404.html" class="block">Pricing</a>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAIN FOOTER -->
+      <footer class="bg-white footer-section">
+        <!-- TOP UTILITY BAR -->
+        <div class="footer-utility">
+          <div
+            class="max-w-7xl bg-[#f1f1f1] py-6 mx-auto px-6 grid grid-cols-1 md:grid-cols-3 md:justify-items-center gap-6"
+          >
+            <a href="./404.html" class="footer-util-item">
+              <span class="footer-util-icon">
+                <i class="fa-solid fa-building-columns"></i>
+              </span>
+              <span>Branches & ATMs</span>
+            </a>
+
+            <a href="./404.html" class="footer-util-item">
+              <span class="footer-util-icon">
+                <i class="fa-solid fa-file-pen"></i>
+              </span>
+              <span>Complaint Registration</span>
+            </a>
+
+            <a href="./404.html" class="footer-util-item">
+              <span class="footer-util-icon">
+                <i class="fa-solid fa-file-arrow-down"></i>
+              </span>
+              <span>Download Forms</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- BOTTOM FOOTER -->
+        <div class="py-10 footer-bottom">
+          <div
+            class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 items-center"
+          >
+            <!-- LEFT -->
+            <div class="text-center md:text-left">
+              <p class="mb-4">Follow Us On</p>
+              <div
+                class="flex items-center justify-center md:justify-start gap-3 footer-social"
+              >
+                <a href="./404.html"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="./404.html"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="./404.html"><i class="fa-brands fa-instagram"></i></a>
+                <a href="./404.html"
+                  ><i class="fa-brands fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- CENTER -->
+            <div class="text-center footer-center">
+              <div class="flex justify-center items-center gap-2 mb-2">
+                <span class="font-bold text-xl"
+                  >Stack<span class="text-primary">Bank</span></span
+                >
+              </div>
+              <p class="text-slate-600">
+                copyrights © 2026 <span class="text-primary">Stackbank</span>.
+                All Rights Reserved.
+              </p>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="text-center md:text-right footer-links">
+              <a href="./404.html" class="block">Privacy Policy</a>
+              <a href="./404.html" class="block">Terms & Conditions</a>
+              <a href="./404.html" class="block">Disclaimer.</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- JS -->
+    <script src="./script.js"></script>
+  </body>
+</html>
