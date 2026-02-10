@@ -1,3 +1,88 @@
+/* loader */
+
+.sb-loader-wrapper {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease,
+    visibility 0.6s;
+}
+
+.sb-loader-wrapper.hide {
+  opacity: 0;
+  transform: scale(0.98);
+  visibility: hidden;
+}
+
+/* Letter loader (already approved style) */
+.sb-letter-loader {
+  display: flex;
+  gap: 4px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #134e4a;
+}
+
+.sb-letter-loader span {
+  opacity: 0;
+  transform: translateY(6px);
+  animation: sbLetterFade 1.6s infinite;
+}
+
+.sb-letter-loader span:nth-child(1) {
+  animation-delay: 0s;
+}
+.sb-letter-loader span:nth-child(2) {
+  animation-delay: 0.08s;
+}
+.sb-letter-loader span:nth-child(3) {
+  animation-delay: 0.16s;
+}
+.sb-letter-loader span:nth-child(4) {
+  animation-delay: 0.24s;
+}
+.sb-letter-loader span:nth-child(5) {
+  animation-delay: 0.32s;
+}
+.sb-letter-loader span:nth-child(6) {
+  animation-delay: 0.4s;
+}
+.sb-letter-loader span:nth-child(7) {
+  animation-delay: 0.48s;
+}
+.sb-letter-loader span:nth-child(8) {
+  animation-delay: 0.56s;
+}
+.sb-letter-loader span:nth-child(9) {
+  animation-delay: 0.64s;
+}
+
+@keyframes sbLetterFade {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  60% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 /* <!-- Swiper CSS --> */
 
 .swiper-button-next,
@@ -411,4 +496,62 @@
 
 .footer-links p:hover {
   color: #1b3c53;
+}
+
+/* SCROLL TO TOP */
+
+.scroll-top-btn {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+.scroll-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Icon */
+.scroll-top-btn i {
+  position: absolute;
+  color: #134e4a;
+  font-size: 16px;
+}
+
+/* SVG */
+.scroll-progress {
+  transform: rotate(-90deg);
+}
+
+.scroll-bg {
+  fill: none;
+  stroke: #e5e7eb;
+  stroke-width: 4;
+}
+
+.scroll-indicator {
+  fill: none;
+  stroke: #134e4a;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 126;
+  stroke-dashoffset: 126;
+}
+
+/* Hover */
+.scroll-top-btn:hover {
+  background: #f8fafc;
 }

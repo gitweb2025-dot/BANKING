@@ -86,7 +86,23 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body class="font-primary">
-    <div>
+    <!-- loader -->
+    <div id="sb-loader" class="sb-loader-wrapper">
+      <div class="sb-letter-loader text-3xl">
+        <span>S</span>
+        <span>T</span>
+        <span>A</span>
+        <span>C</span>
+        <span>K</span>
+        <span>B</span>
+        <span>A</span>
+        <span>N</span>
+        <span>K</span>
+      </div>
+    </div>
+
+    <!-- site content -->
+    <div class="z-10">
       <!-- NAVBAR -->
       <header
         id="navbar"
@@ -96,7 +112,11 @@
           <div class="h-20.5 flex items-center justify-between">
             <!-- LOGO -->
             <div class="nav-logo flex items-center gap-3">
-              <span class="text-2xl font-semibold text-primary">StackBank</span>
+              <a href="./index.html"
+                ><span class="text-2xl font-semibold text-primary"
+                  >StackBank</span
+                ></a
+              >
             </div>
 
             <!-- DESKTOP NAV -->
@@ -113,9 +133,7 @@
                 <div
                   class="submenu w-32 absolute top-13 left-0 bg-secondary text-white z-40 rounded-xl p-6 space-y-3"
                 >
-                  <a href="./404.html" class="block">Home 1</a>
                   <a href="./404.html" class="block">Home 2</a>
-                  <a href="./404.html" class="block">Home 3</a>
                 </div>
               </div>
 
@@ -131,9 +149,10 @@
                 <div
                   class="submenu w-56 absolute top-13 left-0 bg-secondary text-white z-40 rounded-xl p-6 space-y-3 flex flex-col justify-center"
                 >
-                  <a href="./404.html">Cloud Services</a>
-                  <a href="./404.html">Cyber Security</a>
-                  <a href="./404.html">IT Consulting</a>
+                  <a href="./404.html">Cards & Payments </a>
+                  <a href="./404.html">Loans & Protection</a>
+                  <a href="./404.html">Internet Banking</a>
+                  <a href="./404.html">Mobile Banking</a>
                 </div>
               </div>
 
@@ -167,7 +186,7 @@
 
         <!-- MOBILE MENU -->
         <div
-          class="mobile-menu fixed hidden inset-0 bg-primary text-white z-50 p-8"
+          class="mobile-menu fixed hidden inset-0 bg-primary min-h-screen text-white z-9999 p-8"
         >
           <button class="mobile-close mb-10">
             <i class="fa-solid fa-xmark text-2xl"></i>
@@ -185,9 +204,7 @@
               <div
                 class="submenu absolute left-0 top-full mt-3 bg-secondary text-white rounded-xl p-6 space-y-3 flex flex-col justify-center w-full z-50"
               >
-                <a href="./404.html">Home 1</a>
                 <a href="./404.html">Home 2</a>
-                <a href="./404.html">Home 3</a>
               </div>
             </div>
 
@@ -204,9 +221,10 @@
               <div
                 class="submenu absolute left-0 top-full mt-3 bg-secondary text-white rounded-xl p-6 space-y-3 flex flex-col justify-center w-full z-50"
               >
-                <a href="./404.html">Cloud Services</a>
-                <a href="./404.html">Cyber Security</a>
-                <a href="./404.html">IT Consulting</a>
+                <a href="./404.html">Cards & Payments </a>
+                <a href="./404.html">Loans & Protection</a>
+                <a href="./404.html">Internet Banking</a>
+                <a href="./404.html">Mobile Banking</a>
               </div>
             </div>
 
@@ -610,9 +628,9 @@
 
       <!-- GRID -->
       <section
-        class="py-28 bg-linear-to-b from-white to-primary/5 trust-sectionv overflow-hidden"
+        class="py-28 max-w-7xl mx-auto w-full bg-linear-to-b from-white to-primary/5 trust-sectionv overflow-hidden"
       >
-        <div class="max-w-7xl mx-auto px-6">
+        <div class="px-6">
           <!-- Header -->
           <div class="text-center mb-20 trust-header">
             <p class="text-primary font-semibold mb-4 trust-tag">PRODUCT</p>
@@ -716,28 +734,28 @@
             >
               <div class="trust-stat">
                 <h3 class="trust-count text-4xl font-bold" data-count="72000">
-                  0
+                  72000
                 </h3>
                 <p class="text-2xl">Active Users</p>
               </div>
 
               <div class="trust-stat">
                 <h3 class="trust-count text-4xl font-bold" data-count="45000">
-                  0
+                  45000
                 </h3>
                 <p class="text-2xl">Daily Transactions</p>
               </div>
 
               <div class="trust-stat">
                 <h3 class="trust-count text-4xl font-bold" data-count="99">
-                  0
+                  99
                 </h3>
                 <p class="text-2xl">Security Guaranteed</p>
               </div>
 
               <div class="trust-stat">
                 <h3 class="trust-count text-4xl font-bold" data-count="500">
-                  0
+                  500
                 </h3>
                 <p class="text-2xl">Integrated Merchants</p>
               </div>
@@ -876,7 +894,7 @@
                 <div>
                   <p class="font-semibold">Can't Find What You Need?</p>
                   <a
-                    href="#"
+                    href="./404.html"
                     class="text-primary font-semibold inline-flex items-center gap-2"
                   >
                     Submit Queries <i class="fa-solid fa-arrow-right"></i>
@@ -1300,9 +1318,11 @@
             <!-- CENTER -->
             <div class="text-center footer-center">
               <div class="flex justify-center items-center gap-2 mb-2">
-                <span class="font-bold text-xl"
-                  >Stack<span class="text-primary">Bank</span></span
-                >
+                <a href="./index.html">
+                  <span class="font-bold text-xl"
+                    >Stack<span class="text-primary">Bank</span></span
+                  >
+                </a>
               </div>
               <p class="text-slate-600">
                 copyrights © 2026 <span class="text-primary">Stackbank</span>.
@@ -1319,6 +1339,20 @@
           </div>
         </div>
       </footer>
+
+      <!-- SCROLL TO TOP -->
+      <button
+        id="scrollTopBtn"
+        class="scroll-top-btn"
+        aria-label="Scroll to top"
+      >
+        <svg class="scroll-progress" width="48" height="48">
+          <circle class="scroll-bg" cx="24" cy="24" r="20" />
+          <circle class="scroll-indicator" cx="24" cy="24" r="20" />
+        </svg>
+
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
     </div>
 
     <!-- JS -->

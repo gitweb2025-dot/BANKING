@@ -1,3 +1,18 @@
+// loader
+
+window.addEventListener("load", () => {
+  const loader = document.getElementById("sb-loader");
+
+  setTimeout(() => {
+    loader.classList.add("hide");
+
+    // optional: remove from DOM completely after animation
+    setTimeout(() => {
+      loader.remove();
+    }, 700); // match CSS transition
+  }, 2100);
+});
+
 // <!-- ROUNDED NAVBAR ANIMATION JS -->
 
 const navbar = document.getElementById("navbar");
@@ -15,7 +30,7 @@ const observer = new IntersectionObserver(
         navbar,
         {
           opacity: 0,
-          y: -200,
+          y: -100,
         },
         {
           opacity: 1,
@@ -557,4 +572,81 @@ gsap.from(".footer-utility, .footer-bottom", {
     trigger: ".footer-section",
     start: "top 90%",
   },
+});
+
+// ===============================
+// LENIS SETUP (SMOOTH + CONTROLLED)
+// ===============================
+const lenis = new Lenis({
+  duration: 1, // 1.2–1.4 = best for UI-heavy sites
+  easing: (t) => 1 - Math.pow(1 - t, 4), // smooth, natural
+  smoothWheel: true,
+  smoothTouch: false, // keep mobile native
+});
+
+// ===============================
+// SYNC WITH SCROLLTRIGGER
+// ===============================
+lenis.on("scroll", ScrollTrigger.update);
+
+ScrollTrigger.scrollerProxy(document.body, {
+  scrollTop(value) {
+    return arguments.length
+      ? lenis.scrollTo(value, { immediate: true })
+      : lenis.scroll.instance.scroll.y;
+  },
+  getBoundingClientRect() {
+    return {
+      top: 0,
+      left: 0,
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+  },
+});
+
+// ===============================
+// RAF LOOP (CORRECT WAY)
+// ===============================
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
+// ===============================
+// REFRESH FIX
+// ===============================
+ScrollTrigger.addEventListener("refresh", () => lenis.resize());
+ScrollTrigger.refresh();
+
+// SCROLL TOP
+
+const scrollBtn = document.getElementById("scrollTopBtn");
+const indicator = document.querySelector(".scroll-indicator");
+const circumference = 126;
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+  const docHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+
+  const progress = scrollTop / docHeight;
+  const offset = circumference - progress * circumference;
+
+  indicator.style.strokeDashoffset = offset;
+
+  if (scrollTop > 200) {
+    scrollBtn.classList.add("show");
+  } else {
+    scrollBtn.classList.remove("show");
+  }
+});
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 });
